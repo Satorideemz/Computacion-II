@@ -23,7 +23,7 @@ for lines in file:
 
     elif pid!=0:
         lines=os.read(fdr,8192)
-        print(lines)
+        #print(lines)
         decoded_lines=lines.decode("ascii")
         contador_lineas=decoded_lines.count('\n')
         res = len(decoded_lines.split())
