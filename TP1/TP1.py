@@ -27,8 +27,12 @@ def forking(pipes,mainpipe_w):
         if child_n==0:
             #recibo del padre el pipe con la linea, la invierto y la devuelvo escribiendo en otro pipe
             recieved_text=read_pipe(pipes[i][0])
+            if i==len(pipes)-1:
+                #esto es solo un detalle estetico para espaciar la ultima linea
+                recieved_text+="\n"
             recieved_text=reverse(recieved_text)
             write_pipe(recieved_text,mainpipe_w)
+
             #finalizo la ejecucion del hijo
             os._exit(0)
 
