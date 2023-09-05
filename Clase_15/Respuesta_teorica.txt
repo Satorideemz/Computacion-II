@@ -1,0 +1,1 @@
+BrokenPipeError ocurre porque se intenta escribir en un pipe que ya ha sido cerrado, y esto ocurre cuando se trata de interactuar con un socket que ya no está disponible debido a que la conexión fue cerrada por el lado del cliente.
