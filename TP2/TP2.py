@@ -97,7 +97,7 @@ def start_server(ip, port):
         server_socket = socket.create_server((ip, port), family=socket.AF_INET6, dualstack_ipv6=True)
     else:
         # Use socket.AF_INET for IPv4 addresses
-        server_socket = socket.create_server(('0.0.0.0', port))
+        server_socket = socket.create_server((ip, port))
     # Create an event for synchronization
     conversion_event = multiprocessing.Event()
 
